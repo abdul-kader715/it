@@ -3,6 +3,13 @@
 --------------------------------------------------------------*/
 .site-header {
 
+	@media(max-width:767px) {
+		.container {
+			max-width: 100%;
+		}
+	}
+
+
 	.navigation {
 		background-color: $white;
 		margin-bottom: 0;
@@ -25,21 +32,22 @@
 		>ul li a:hover,
 		>ul li a:focus {
 			text-decoration: none;
-			color: $theme-primary-color;
+			color: $dark-gray;
 		}
 
 		// style for widther screen
 		@include widther(992px) {
 			li {
 				position: relative;
+				list-style: none;
 			}
 
 			>ul>li>a {
-				font-size: 15px;
-				font-size: calc-rem-value(15);
-				font-weight: bold;
+				font-size: 16px;
+				font-weight: 500;
 				padding: 30px 20px;
-				text-transform: uppercase;
+				text-transform: capitalize;
+				color: #6c6f76;
 			}
 
 			>ul>li:first-child>a:first-child {
@@ -68,6 +76,9 @@
 			>ul>li .sub-menu a {
 				display: block;
 				padding: 10px 20px;
+				font-size: 15px;
+				font-weight: 500;
+				text-transform: capitalize;
 			}
 
 			>ul>li>.sub-menu .sub-menu {
@@ -82,7 +93,6 @@
 					font-family: "FontAwesome";
 					content: "\f105";
 					font-size: 15px;
-					font-size: calc-rem-value(15);
 					position: absolute;
 					right: 15px;
 					top: 50%;
@@ -92,7 +102,7 @@
 
 			/*** hover effect ***/
 			>ul>li:hover>.sub-menu {
-				top: 100%;
+				top: 170%;
 				visibility: visible;
 				opacity: 1;
 			}
@@ -109,7 +119,6 @@
 			>ul>li a {
 				display: block;
 				font-size: 14px;
-				font-size: calc-rem-value(14);
 			}
 
 			>ul>li .sub-menu li {
@@ -135,7 +144,6 @@
 					font-family: "FontAwesome";
 					content: "\f107";
 					font-size: 15px;
-					font-size: calc-rem-value(15);
 					position: absolute;
 					right: 15px;
 					top: 50%;
@@ -176,7 +184,6 @@
 
 			.mega-menu-box-title {
 				font-size: 14px;
-				font-size: calc-rem-value(14);
 				text-transform: uppercase;
 				font-weight: bold;
 				display: block;
@@ -187,7 +194,6 @@
 
 			.mega-menu-list-holder li a {
 				font-size: 14px;
-				font-size: calc-rem-value(14);
 				display: block;
 				padding: 7px 8px;
 				margin-left: -8px;
@@ -236,7 +242,6 @@
 
 			.mega-menu .mega-menu-box-title {
 				font-size: 14px;
-				font-size: calc-rem-value(14);
 				text-transform: uppercase;
 				display: block;
 				border-bottom: 1px dotted lighten($black, 70%);
@@ -259,6 +264,7 @@
 
 	.navbar {
 		padding-bottom: 0;
+		padding-top: 0;
 	}
 
 	/* style for navigation less than 992px */
@@ -281,9 +287,10 @@
 			outline: 0;
 			position: absolute;
 			right: 15px;
-			top: 20px;
 			z-index: 20;
+			top: 50%;
 			border-radius: 50%;
+			transform: translateY(-50%);
 
 
 			span {
@@ -403,15 +410,18 @@
 	header style 1
 ***********************************/
 .header-style-1 {
+
 	.topbar {
 		background-color: $white;
 		padding: 20px 0;
 		position: relative;
 		z-index: 1;
+		overflow: hidden;
 		border-bottom: 2px solid $border-color;
 
 		@media (max-width:991px) {
 			background: $theme-primary-color;
+			border-bottom: 0;
 		}
 
 		@include media-query(767px) {
@@ -421,8 +431,8 @@
 		&:before {
 			position: absolute;
 			right: 55%;
-			top: 0px;
-			height: 100%;
+			top: -5px;
+			height: 145%;
 			width: 7%;
 			background-color: $theme-primary-color;
 			clip-path: polygon(0 1%, 0% 100%, 100% 100%);
@@ -466,8 +476,8 @@
 				position: absolute;
 				right: 58%;
 				top: 0px;
-				height: 100%;
-				width: 7%;
+				height: 187%;
+				width: 9%;
 				background-color: $theme-primary-color-s5;
 				clip-path: polygon(0 0, 0 100%, 100% 0);
 				content: "";
@@ -501,7 +511,9 @@
 			align-items: center;
 
 			@media (max-width:767px) {
-				display: unset;
+				display: block;
+				border-top: 1px solid $border-color;
+				margin-top: 20px;
 			}
 
 			.contact-info {
@@ -618,13 +630,11 @@
 
 			@include media-query(991px) {
 				font-size: 14px;
-				font-size: calc-rem-value(14);
 			}
 		}
 
 		p {
 			font-size: 22px;
-			font-size: calc-rem-value(22);
 			font-weight: 400;
 			line-height: 1.3em;
 			color: #5d5d5d;
@@ -632,7 +642,6 @@
 
 			@include media-query(991px) {
 				font-size: 18px;
-				font-size: calc-rem-value(18);
 			}
 		}
 	}
@@ -659,22 +668,28 @@
 
 
 	#navbar>ul>li a {
-		color: #4d5058;
+		color: $section-bg-color;
 	}
 
 	.navigation .search-quote {
 		float: right;
-		margin-top: 19px;
 
 		@include media-query(991px) {
-			width: 200px;
+			width: 100%;
 			float: left;
 			position: relative;
-			margin-top: 20px;
 		}
 
 		>div {
 			float: left;
+
+			@media (max-width:991px) {
+				width: 33%;
+			}
+
+			@media (max-width:542px) {
+				width: 38%;
+			}
 		}
 	}
 
@@ -687,22 +702,6 @@
 
 		@include media-query(991px) {
 			right: -20px;
-		}
-
-		&:before {
-			background: #d9d9d9;
-			content: "";
-			width: 1px;
-			height: 30px;
-			position: absolute;
-			left: -20px;
-			top: 50%;
-			@include translatingY();
-
-			@include media-query(991px) {
-				right: -20px;
-				left: auto;
-			}
 		}
 	}
 
@@ -751,7 +750,6 @@
 
 		.fi:before {
 			font-size: 18px;
-			font-size: calc-rem-value(18);
 			color: $theme-primary-color;
 		}
 	}
@@ -759,6 +757,66 @@
 	.search:hover>div {
 		opacity: 1;
 		visibility: visible;
+	}
+
+	.select-lg {
+		margin-right: 36px;
+
+		@media (max-width:542px) {
+			margin-right: 0;
+		}
+
+		.form-control {
+			border: 1px solid transparent;
+			font-size: 16px;
+			font-weight: 500;
+			width: 85px;
+			line-height: 18px;
+			color: $section-bg-color;
+			padding: 14px 5px;
+			margin: 5px;
+			border-radius: 0;
+
+			@media (max-width:542px) {
+				font-size: 16px;
+			}
+
+			&:focus {
+				box-shadow: none;
+			}
+		}
+
+		select {
+			display: inline-block;
+			color: #a9a9a9;
+			cursor: pointer;
+			opacity: 1;
+			padding: 6px 25px;
+			font-size: 15px;
+			font-size: calc-rem-value(15);
+			-webkit-appearance: none;
+			-ms-appearance: none;
+			-o-appearance: none;
+			appearance: none;
+			-moz-appearance: none;
+			background: transparent url(../images/select-icon2.png) no-repeat calc(100% - 10px) center;
+			position: relative;
+
+			&:focus {
+				background: transparent url(../images/select-icon2.png) no-repeat calc(100% - 10px) center;
+			}
+		}
+	}
+
+	.quote {
+		.theme-btn {
+			border-radius: 0;
+			padding: 20px 45px;
+
+			@media (max-width:542px) {
+				padding: 20px 15px;
+			}
+		}
 	}
 
 }

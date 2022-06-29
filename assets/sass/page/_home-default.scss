@@ -381,7 +381,6 @@
 
         h2 {
             font-size: 30px;
-            font-size: calc-rem-value(30);
             font-weight: 600;
             margin: 0 0 1.8em;
 
@@ -391,12 +390,10 @@
 
             @include media-query(991px) {
                 font-size: 26px;
-                font-size: calc-rem-value(26);
             }
 
             @include media-query(767px) {
                 font-size: 25px;
-                font-size: calc-rem-value(25);
             }
         }
 
@@ -414,7 +411,6 @@
 
             h3 {
                 font-size: 60px;
-                font-size: calc-rem-value(60);
                 font-weight: 700;
                 color: $white;
                 margin: 0 0 0.2em;
@@ -425,17 +421,14 @@
 
                 @include media-query(1200px) {
                     font-size: 50px;
-                    ont-size: calc-rem-value(50);
                 }
 
                 @include media-query(991px) {
                     font-size: 40px;
-                    font-size: calc-rem-value(40);
                 }
 
                 @include media-query(767px) {
                     font-size: 35px;
-                    font-size: calc-rem-value(35);
                 }
             }
 
@@ -445,24 +438,20 @@
 
         .grid h3+p {
             font-size: 20px;
-            font-size: calc-rem-value(20);
             margin: 0;
             color: $white;
             font-family: $heading-font;
 
             @include media-query(1200px) {
                 font-size: 18px;
-                font-size: calc-rem-value(18);
             }
 
             @include media-query(991px) {
                 font-size: 16px;
-                font-size: calc-rem-value(16);
             }
 
             @include media-query(767px) {
                 font-size: 14px;
-                font-size: calc-rem-value(14);
             }
         }
     }

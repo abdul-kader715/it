@@ -33,7 +33,6 @@
 			height: 50px;
 			line-height: 50px;
 			font-size: 16px;
-			font-size: calc-rem-value(16);
 			font-weight: 600;
 			color: $dark-gray;
 			background: #ebf4fc;
@@ -44,7 +43,6 @@
 				height: 40px;
 				line-height: 40px;
 				font-size: 15px;
-				font-size: calc-rem-value(15);
 			}
 		}
 
@@ -57,7 +55,6 @@
 
 		.fi:before {
 			font-size: 15px;
-			font-size: calc-rem-value(15);
 		}
 	}
 }

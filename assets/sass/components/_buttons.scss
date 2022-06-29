@@ -9,7 +9,6 @@
 	z-index: 1;
 	position: relative;
 	font-size: 16px;
-	font-size: calc-rem-value(16);
 	border-radius: 5px;
 	line-height: 18px;
 	transition: all .4s ease-in-out;
@@ -54,7 +53,6 @@
 
 	@include media-query(991px) {
 		font-size: 18px;
-		font-size: calc-rem-value(18);
 	}
 
 	@include media-query(767px) {
@@ -91,7 +89,6 @@
 
 	@include media-query(991px) {
 		font-size: 14px;
-		font-size: calc-rem-value(14);
 	}
 
 	&:hover,

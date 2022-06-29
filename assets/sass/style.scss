@@ -71,7 +71,6 @@ Version:        1.0.0
 
 // helpers
 @import "helpers/variables";
-@import "helpers/functions";
 @import "helpers/mixins";
 
 // base
@@ -112,6 +111,7 @@ Version:        1.0.0
 @import "page/_blog";
 
 @import "page/_blog-single";
+@import "page/contact";
 
 
 
