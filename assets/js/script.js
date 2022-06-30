@@ -173,7 +173,52 @@
     singleMember.on('click', function () {
         $(this).toggleClass('active');
     });
+ /*------------------------------------------
+        = Project SLIDER
+    -------------------------------------------*/
+    if ($(".service-slider").length) {
+        $(".service-slider").owlCarousel({
+            autoplay: false,
+            smartSpeed: 300,
+            margin: 20,
+            loop:true,
+            autoplayHoverPause:true,
+            dots: false,
+            nav: true,
+            navText: ['<i class="fi flaticon-left-arrow"></i>','<i class="fi flaticon-right-arrow"></i>'],
+            responsive: {
+                0 : {
+                    items: 1,
+                    dots: true,
+                    nav: false,
+                },
 
+                500 : {
+                    items: 1,
+                    dots: true,
+                    nav: false,
+                },
+
+                768 : {
+                    items: 2,
+                    nav: false,
+                },
+
+                991 : {
+                    items: 2,
+                },
+                1200 : {
+                    items: 3,
+                },
+
+                1400 : {
+                    items: 3,
+                },
+
+            }
+        });
+    }
+    
     /*------------------------------------------
         = PARTNERS SLIDER
     -------------------------------------------*/
