@@ -8,46 +8,32 @@
 
 	@include media-query(991px) {
 		margin-top: 80px;
-		max-width: 400px;
 	}
 
 	@include media-query(767px) {
 		margin-top: 60px;
-		max-width: 400px;
 	}
 
 	.widget {
 
+		background: $border-color;
+		padding: 40px;
+		border-radius: 5px;
+
+		@include media-query(1400px) {
+			padding: 25px;
+		}
+
 		h3 {
-			font-size: 23px;
+			font-size: 25px;
+			font-size: calc-rem-value(25);
 			color: $dark-gray;
 			margin: 0 0 1.3em;
 			position: relative;
 			text-transform: capitalize;
 			font-family: $heading-font;
-			padding-bottom: 20px;
-			font-weight: 700;
-
-			&:before {
-				content: "";
-				background-color: $theme-primary-color;
-				width: 55px;
-				height: 4px;
-				position: absolute;
-				left: 0;
-			    bottom: 0;
-				border-radius: 10px;
-			}
-			&:after {
-				content: "";
-				background-color: #f2f2f2;
-				width: 80%;
-				height: 4px;
-				position: absolute;
-				left: 65px;
-			    bottom: 0;
-				border-radius: 10px;
-			}
+			font-weight: 400;
+			border-radius: 5px;
 		}
 	}
 
@@ -63,9 +49,10 @@
 		}
 
 		input {
-			background-color: transparentize($theme-primary-color, 0.85);
+			background-color: $white;
 			height: 70px;
 			font-size: 16px;
+			font-size: calc-rem-value(16);
 			padding: 6px 50px 6px 20px;
 			border: 0;
 			border-radius: 5px;
@@ -74,12 +61,13 @@
 		}
 
 		input:focus {
-			background-color: transparentize($theme-primary-color, 0.9);
+			background-color: $white;
 		}
 
 		form button {
 			background: transparent;
 			font-size: 20px;
+			font-size: calc-rem-value(20);
 			color: $white;
 			background-color: $theme-primary-color;
 			border: 0;
@@ -142,8 +130,13 @@
 					width: 40px;
 					height: 40px;
 					line-height: 44px;
-					background-color: #f1f1f1;
+					background-color: $white;
 					border-radius: 50%;
+
+					&:hover{
+						background: $theme-primary-color;
+						color: $white;
+					}
 				}
 			}
 		}
@@ -156,12 +149,14 @@
 
 		p {
 			font-size: 15px;
+			font-size: calc-rem-value(15);
 			margin-bottom: 1.2em;
 		}
 
 		a {
 			font-family: $heading-font;
 			font-size: 14px;
+			font-size: calc-rem-value(14);
 			color: $heading-color;
 			text-decoration: underline;
 		}
@@ -180,10 +175,12 @@
 
 		ul li {
 			font-size: 19px;
+			font-size: calc-rem-value(19);
 			position: relative;
 
 			@include media-query(767px) {
 				font-size: 16px;
+				font-size: calc-rem-value(16);
 			}
 
 			span {
@@ -194,34 +191,45 @@
 
 		ul > li + li {
 			margin-top: 12px;
-			padding-top: 12px;
 		}
 
 		ul a {
 			display: block;
 			color: #474f62;
 			font-size: 16px;
+            padding: 20px;
+			background: $white;
+			padding-left: 60px;
+			position: relative;
+			border-radius: 5px;
+			font-weight: 400;
 
+			@media(max-width:1200px){
+				padding: 10px;
+				padding-left: 25px;
+				font-size: 14px;
+			}
 
-			span{
-				display: inline-block;
-				width: 30px;
-				height: 30px;
-				line-height: 30px;
-				background-color: $section-bg-color;
-				text-align: center;
-				border-radius: 50%;
-				font-size: 18px;
+			&:after{
+				position: absolute;
+				left: 30px;
+				top: 50%;
+				transform: translateY(-50%);
+				content: "\f102";
+				font-family: "Flaticon";
+				transform: translateY(-50%);
 
-				@include media-query(767px) {
-					font-size: 14px;
+				@media(max-width:1200px){
+					left: 5px;
 				}
 			}
 		}
 
 		ul a:hover,
+		ul a.active,
 		ul li:hover:before {
-			color: $theme-primary-color;
+			background: $theme-primary-color;
+			color: $white;
 		}
 	}
 
@@ -250,10 +258,16 @@
 			width: calc(100% - 90px);
 			float: left;
 			padding-left: 20px;
+
+			@media(max-width:1199px){
+				padding-left: 8px;
+			}
+
 		}
 
 		.post h4 {
-			font-size: 18px;
+			font-size: 16px;
+			font-size: calc-rem-value(16);
 			font-weight: 500;
 			line-height: 1.3em;
 			margin: 0 0 0.3em;
@@ -261,10 +275,12 @@
 
 			@include media-query(1199px) {
 				margin: 0;
+				font-size: 14px;
 			}
 
 			@include media-query(767px) {
 				font-size: 16px;
+				font-size: calc-rem-value(16);
 			}
 		}
 
@@ -279,7 +295,8 @@
 
 		.post .details .date {
 			font-size: 13px;
-			color: $text-color;
+			font-size: calc-rem-value(13);
+			color: $theme-primary-color;
 
 			i {
 				display: inline-block;
@@ -330,11 +347,13 @@
 
 		ul li a {
 			font-size: 15px;
+			font-size: calc-rem-value(15);
 			display: inline-block;
-			padding: 5px 18px;
+			padding: 5px 10px;
 			color: $dark-gray;
-			background: #ecf4fb;
+			background: $white;
 			border-radius: 5px;
+			font-family: $base-font;
 		}
 
 		ul li a:hover {
@@ -346,67 +365,63 @@
 	/*** wpo-contact-widget ***/
 
 	.wpo-contact-widget{
-		border: 0;
-        background: url(../images/bg-2.jpg) no-repeat center center;
-        position: relative;
-        background-size: cover;
-        z-index: 1;
-		padding: 30px 40px;
-
-		&:before{
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(22, 57, 103, 0.9);
-            content: "";
-            z-index: -1;
-         }
-
-		@media(max-width:1200px){
-			padding: 20px;
-		}
-	
-		h2{
-			font-size: 36px;
-			font-weight: 700;
-			text-align: left;
-			color: $white;
-			margin-bottom: 20px;
-	
-			&::before{
-				left: 28px;
-				background: url(../images/Single-title-shape2.png) no-repeat right center;
-			}
-		}
-	
-		p{
-			color: $white;
-			font-size: 18px;
-		}
-	
-	
-		a{
-			display:inline-block;
-			padding: 10px 20px;
-			border: 1px solid $white;
-			font-size: 18px;
-			color: $white;
-			padding-right: 90px;
+		.wpo-contact-widget-inner{
+			border: 0;
+			background: url(../images/contact-bg.jpg) no-repeat center center;
 			position: relative;
-			margin-top: 10px;
+			background-size: cover;
+			z-index: 1;
+			padding: 30px 40px;
+			min-height: 330px;
+			object-fit: cover;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			text-align: center;
+			overflow: hidden;
 	
-			&::before{
-				font-family: "themify";
-				content: "\e628";
-				font-size: 18px;
+			&:before{
 				position: absolute;
-				right: 15px;
-				top: 50%;
-				-webkit-transform: translateY(-50%);
-				transform: translateY(-50%);
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background: transparentize($dark-gray, .2);
+				content: "";
+				z-index: -1;
+			 }
+
+			 &:after{
+				 position: absolute;
+				 left: -50px;
+				 top: -50px;
+				 content: "";
+				 width: 150px;
+				 height: 150px;
+				 background: $theme-primary-color;
+				 border-radius: 50%;
+			 }
+	
+			@media(max-width:1200px){
+				padding: 20px;
 			}
+		
+			h2{
+				font-size: 26px;
+				font-weight: 700;
+				color: $white;
+				margin-bottom: 20px;
+				line-height: 35px;
+
+				a{
+					color: $white;
+
+					&:hover{
+						color: $theme-primary-color;
+					}
+				}
+			}
+	
 		}
 	}
 }

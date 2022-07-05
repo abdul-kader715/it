@@ -173,82 +173,179 @@
     singleMember.on('click', function () {
         $(this).toggleClass('active');
     });
- /*------------------------------------------
-        = Project SLIDER
+    
+  /*------------------------------------------
+    static-hero-slide-img SLIDER
     -------------------------------------------*/
+    if ($(".static-hero-slide-img").length) {
+        $(".static-hero-slide-img").owlCarousel({
+            autoplay:true,
+            smartSpeed: 300,
+            margin: 10,
+            loop:true,
+            autoplayHoverPause:true,
+            dots: true,
+            arrows:false,
+            nav: true,
+            navText: ['<i class="ti-arrow-left"></i>','<i class="ti-arrow-right"></i>'],
+            responsive: {
+                0 : {
+                    items: 1,
+                    dots: true,
+                    arrows:false,
+                    nav: false,
+                },
+
+                575 : {
+                    items: 1,
+                },
+                767 : {
+                    items: 1,
+                    dots: false,
+                },
+
+                992 : {
+                    items: 2,
+                    dots: false,
+                },
+
+                1200 : {
+                    items: 3
+                }
+            }
+        });
+    }
+
+
+    /*------------------------------------------
+            service slider
+       -------------------------------------------*/
     if ($(".service-slider").length) {
         $(".service-slider").owlCarousel({
             autoplay: false,
             smartSpeed: 300,
             margin: 20,
-            loop:true,
-            autoplayHoverPause:true,
+            loop: true,
+            autoplayHoverPause: true,
             dots: false,
             nav: true,
-            navText: ['<i class="fi flaticon-left-arrow"></i>','<i class="fi flaticon-right-arrow"></i>'],
+            navText: ['<i class="fi flaticon-right-arrow"></i>', '<i class="fi flaticon-left-arrow"></i>'],
             responsive: {
-                0 : {
+                0: {
                     items: 1,
                     dots: true,
                     nav: false,
                 },
 
-                500 : {
+                500: {
                     items: 1,
                     dots: true,
                     nav: false,
                 },
 
-                768 : {
+                768: {
                     items: 2,
                     nav: false,
                 },
 
-                991 : {
+                991: {
                     items: 2,
                 },
-                1200 : {
+                1200: {
                     items: 3,
                 },
 
-                1400 : {
+                1400: {
                     items: 3,
                 },
 
             }
         });
     }
-    
+
     /*------------------------------------------
         = PARTNERS SLIDER
     -------------------------------------------*/
     if ($(".partners-slider").length) {
         $(".partners-slider").owlCarousel({
-            autoplay:true,
+            autoplay: true,
             smartSpeed: 300,
             margin: 30,
-            loop:true,
-            autoplayHoverPause:true,
+            loop: true,
+            autoplayHoverPause: true,
             dots: false,
             responsive: {
-                0 : {
+                0: {
                     items: 2
                 },
 
-                550 : {
+                550: {
                     items: 3
                 },
 
-                992 : {
+                992: {
                     items: 4
                 },
 
-                1200 : {
+                1200: {
                     items: 6
                 }
             }
         });
     }
+
+    // testimonial-slider
+
+    $('.testimonial-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav'
+    });
+    $('.slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.testimonial-slider',
+        arrows: true,
+        dots: false,
+        centerMode: true,
+        focusOnSelect: true,
+        responsive: [{
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                   arrows:false,
+                   dots:true
+                }
+            }
+
+
+        ]
+    });
+
 
     // Parallax background
     function bgParallax() {
