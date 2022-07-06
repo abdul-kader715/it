@@ -2,7 +2,6 @@
 .wpo-about-section,
 .wpo-about-section-s2,
 .wpo-about-section-s3 {
-    background: $body-color;
 
     .wpo-about-wrap {
         text-align: start;
@@ -200,10 +199,14 @@
 
 // wpo-services-section
 .wpo-service-section,
-.wpo-service-section-s2 {
-    background: $body-color;
+.wpo-service-section-s2,
+.wpo-service-section-s3 {
     position: relative;
     z-index: 1;
+
+    @media (max-width:767px) {
+        padding-bottom: 30px;
+    }
 
     &::before {
         position: absolute;
@@ -274,6 +277,15 @@
                         font-weight: 400;
                         line-height: 28px;
                         color: $text-color;
+                        padding: 0 2px;
+
+                        @media (max-width:767px) {
+                            padding: 0 51px;
+                        }
+
+                        @media (max-width:510px) {
+                            padding: 0;
+                        }
                     }
 
                     .service-btn {
@@ -328,8 +340,6 @@
                         bottom: 0;
                     }
                 }
-
-
             }
 
             .service-slider {
@@ -338,12 +348,6 @@
                     left: -11%;
                     bottom: 50%;
                     transform: translateY(-50%);
-
-                    i {
-                        padding-top: 5px;
-
-                        &::before {}
-                    }
                 }
 
                 .owl-nav button {
@@ -351,9 +355,9 @@
                     right: -11%;
                     bottom: 50%;
                     transform: translateY(-50%);
-                    height: 60px;
                     width: 60px;
-                    line-height: 46px;
+                    height: 60px;
+                    line-height: 0;
                     text-align: center;
                     transition: all 0.3s;
                     background: $border-color-s2;
@@ -363,7 +367,16 @@
                     border: transparent;
                     transition: all .4s ease-in-out;
 
-                    @media (max-width:767px) {
+                    i {
+
+                        &::before {
+                            font-size: 20px;
+                            line-height: 22px;
+
+                        }
+                    }
+
+                    @media (max-width:885px) {
                         display: none;
                     }
 
@@ -650,11 +663,13 @@
 .wpo-team-section {
     // background: $body-color;
     position: relative;
+    z-index: 1;
 
     .shepe-1 {
         position: absolute;
         top: -200px;
         right: 0;
+        z-index: -1;
 
         svg {
             path {
@@ -667,6 +682,7 @@
         position: absolute;
         bottom: 0;
         left: 0;
+        z-index: -1;
 
         svg {
             path {
@@ -680,7 +696,8 @@
         .team-1,
         .team-5 {
             margin-top: 155px;
-
+            position: relative;
+            z-index: 11;
             @media (max-width:991px) {
                 margin-top: 0;
             }
@@ -689,7 +706,8 @@
         .team-2,
         .team-4 {
             margin-top: 55px;
-
+            position: relative;
+            z-index: 11;
             @media (max-width:991px) {
                 margin-top: 0;
             }
@@ -697,6 +715,8 @@
 
         .grid {
             text-align: center;
+            position: relative;
+            z-index: 11;
 
             @media (max-width:991px) {
                 margin-bottom: 30px;
@@ -761,12 +781,15 @@
                 transition: all .4s ease-in-out;
 
                 h3 {
-                    font-family: $heading-font;
-                    font-size: 20px;
-                    font-weight: 700;
-                    line-height: 23px;
-                    color: $dark-gray;
-                    margin-bottom: 10px;
+                    a {
+                        font-family: $heading-font;
+                        font-size: 20px;
+                        font-weight: 700;
+                        line-height: 23px;
+                        color: $dark-gray;
+                        margin-bottom: 10px;
+                        transition: all .4s ease-in-out;
+                    }
 
                     @media (max-width:1199px) {
                         font-size: 18px;
@@ -774,13 +797,11 @@
                 }
 
                 span {
-                    a {
-                        font-family: $base-font;
-                        font-size: 15px;
-                        font-weight: 400;
-                        line-height: 16px;
-                        color: $text-color;
-                    }
+                    font-family: $base-font;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 16px;
+                    color: $text-color;
                 }
             }
 
@@ -805,13 +826,13 @@
 
                 }
 
-                .text {
-                    span {
+                
+                    h3 {
                         a {
                             color: $theme-primary-color;
                         }
                     }
-                }
+              
 
             }
         }
@@ -819,6 +840,7 @@
         .team-grids-btn {
             margin-top: -80px;
             position: relative;
+            z-index: 1;
 
             @media (max-width:991px) {
                 margin-top: 20px;
@@ -829,6 +851,7 @@
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
+                z-index: -1;
 
                 @media (max-width:991px) {
                     top: 70%;
@@ -910,7 +933,7 @@
                         content: '';
                         background: $theme-primary-color;
                         transition: all .4s ease-in-out;
-                        z-index: -1;
+                        z-index: -111;
 
                         @media (max-width:1399px) {
                             bottom: -155px;
@@ -1001,9 +1024,9 @@
 }
 
 /*--------------------------------------------------------------
-#1.4 wpo-project-section
+#1.4 wpo-portfolio-section
 --------------------------------------------------------------*/
-.wpo-project-section {
+.wpo-portfolio-section {
     padding-bottom: 90px;
     margin: 0 30px;
 
@@ -1343,7 +1366,7 @@
 
                 .slick-prev {
                     left: 145px;
-                    top: 150%;
+                    top: 139%;
 
                     @media(max-width:1399px) {
                         top: 133%;
@@ -1367,7 +1390,7 @@
 
                 .slick-next {
                     right: 130px;
-                    top: 150%;
+                    top: 139%;
 
                     @media(max-width:1399px) {
                         right: 150px;
@@ -1460,7 +1483,6 @@
 
 .wpo-blog-section,
 .wpo-blog-section-s2 {
-    background: $body-color;
     padding-bottom: 75px;
     margin: 0 150px;
 

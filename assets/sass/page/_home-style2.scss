@@ -200,7 +200,10 @@
 
                     p {
                         color: $white;
-                        padding: 0 10px;
+                        padding: 0 55px;
+                        @media (max-width:445px) {
+                            padding: 0; 
+                        }
                     }
 
                     .service-btn {

@@ -103,9 +103,11 @@ Version:        1.0.0
 
 @import "page/_about";
 
+@import "page/_service";
 @import "page/_service-single";
 
-@import "page/_project-single";
+@import "page/_shop";
+@import "page/_shop-single";
 
 @import "page/_team";
 
@@ -115,6 +117,11 @@ Version:        1.0.0
 @import "page/_blog";
 
 @import "page/_blog-single";
+
+@import "page/_404";
+
+@import "page/_faq";
+
 @import "page/contact";
 
 

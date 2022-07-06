@@ -173,43 +173,43 @@
     singleMember.on('click', function () {
         $(this).toggleClass('active');
     });
-    
-  /*------------------------------------------
-    static-hero-slide-img SLIDER
-    -------------------------------------------*/
+
+    /*------------------------------------------
+      static-hero-slide-img SLIDER
+      -------------------------------------------*/
     if ($(".static-hero-slide-img").length) {
         $(".static-hero-slide-img").owlCarousel({
-            autoplay:true,
+            autoplay: true,
             smartSpeed: 300,
             margin: 10,
-            loop:true,
-            autoplayHoverPause:true,
+            loop: true,
+            autoplayHoverPause: true,
             dots: true,
-            arrows:false,
+            arrows: false,
             nav: true,
-            navText: ['<i class="ti-arrow-left"></i>','<i class="ti-arrow-right"></i>'],
+            navText: ['<i class="ti-arrow-left"></i>', '<i class="ti-arrow-right"></i>'],
             responsive: {
-                0 : {
+                0: {
                     items: 1,
                     dots: true,
-                    arrows:false,
+                    arrows: false,
                     nav: false,
                 },
 
-                575 : {
+                575: {
                     items: 1,
                 },
-                767 : {
+                767: {
                     items: 1,
                     dots: false,
                 },
 
-                992 : {
+                992: {
                     items: 2,
                     dots: false,
                 },
 
-                1200 : {
+                1200: {
                     items: 3
                 }
             }
@@ -247,7 +247,6 @@
                     items: 2,
                     nav: false,
                 },
-
                 991: {
                     items: 2,
                 },
@@ -295,56 +294,102 @@
     }
 
     // testimonial-slider
+    $(function () {
 
-    $('.testimonial-slider').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider-nav'
-    });
-    $('.slider-nav').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        asNavFor: '.testimonial-slider',
-        arrows: true,
-        dots: false,
-        centerMode: true,
-        focusOnSelect: true,
-        responsive: [{
-                breakpoint: 1400,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
+        $('.testimonial-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-navbar'
+        });
+        $('.slider-navbar').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.testimonial-slider',
+            arrows: true,
+            dots: false,
+            centerMode: true,
+            focusOnSelect: true,
+            responsive: [{
+                    breakpoint: 1400,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        dots: true
+                    }
                 }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                   arrows:false,
-                   dots:true
-                }
-            }
 
 
-        ]
-    });
+            ]
+        });
+
+
+    })
+
+
+    /*------------------------------------------
+         = SHOP DETAILS PAGE PRODUCT SLIDER
+     -------------------------------------------*/
+    $(function () {
+
+        if ($(".shop-single-slider").length) {
+            $('.slider-for').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.slider-nav'
+            });
+            $('.slider-nav').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for',
+                focusOnSelect: true,
+                prevArrow: '<i class="nav-btn nav-btn-lt ti-arrow-left"></i>',
+                nextArrow: '<i class="nav-btn nav-btn-rt ti-arrow-right"></i>',
+
+                responsive: [{
+                        breakpoint: 500,
+                        settings: {
+                            slidesToShow: 3,
+                            infinite: true
+                        }
+                    },
+                    {
+                        breakpoint: 400,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    }
+                ]
+
+            });
+        }
+
+    })
 
 
     // Parallax background
@@ -796,42 +841,7 @@
     }
 
 
-    /*------------------------------------------
-        = SHOP DETAILS PAGE PRODUCT SLIDER
-    -------------------------------------------*/
-    if ($(".shop-single-slider").length) {
-        $('.slider-for').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            fade: true,
-            asNavFor: '.slider-nav'
-        });
-        $('.slider-nav').slick({
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            asNavFor: '.slider-for',
-            focusOnSelect: true,
-            prevArrow: '<i class="nav-btn nav-btn-lt ti-arrow-left"></i>',
-            nextArrow: '<i class="nav-btn nav-btn-rt ti-arrow-right"></i>',
 
-            responsive: [{
-                    breakpoint: 500,
-                    settings: {
-                        slidesToShow: 3,
-                        infinite: true
-                    }
-                },
-                {
-                    breakpoint: 400,
-                    settings: {
-                        slidesToShow: 2
-                    }
-                }
-            ]
-
-        });
-    }
 
 
     /*------------------------------------------

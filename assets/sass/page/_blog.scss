@@ -1,6 +1,6 @@
 
 /*--------------------------------------------------------------
-15. wpo-blog-pg-section
+19. wpo-blog-pg-section
 --------------------------------------------------------------*/
 .wpo-blog-pg-section {
 	.wpo-blog-content {
@@ -33,6 +33,7 @@
 			li {
 				font-weight: 500;
 				font-size: 14px;
+				font-size: calc-rem-value(14);
 				float: left;
 				text-transform: uppercase;
 
@@ -82,6 +83,7 @@
 	
 				@include media-query(767px) {
 					font-size: 12px;
+					font-size: calc-rem-value(12);
 				}
 	
 				@include media-query(440px) {
@@ -98,6 +100,7 @@
 	.post {
 		h3 {
 			font-size: 34px;
+			font-size: calc-rem-value(34);
 			line-height: 1.2em;
 			font-weight: 700;
 			margin: -0.27em 0 0.7em;
@@ -105,10 +108,12 @@
 
 			@include media-query(991px) {
 				font-size: 25px;
+				font-size: calc-rem-value(25);
 			}
 
 			@include media-query(767px) {
 				font-size: 22px;
+				font-size: calc-rem-value(22);
 			}
 		}
 
@@ -125,6 +130,7 @@
 
 			@include media-query(991px) {
 				font-size: 16px;
+				font-size: calc-rem-value(16);
 			}
 		}
 
@@ -132,6 +138,7 @@
 			color: $text-color;
 			text-transform: capitalize;
 			font-size: 16px;
+			font-weight: 500;
 
 			&:hover{
 				color: $theme-primary-color;
@@ -149,7 +156,7 @@
 	/*** format-standard ***/
 	.format-standard,
 	.format-quote {
-		background-color: $section-bg-color;
+		background-color: $border-color;
 		padding: 25px 35px 45px;
 
 		@include media-query(767px) {
@@ -164,11 +171,11 @@
 			position: absolute;
 			right: 20px;
     		top: 10px;
-			content: "\f10a";
+			content: "\f108";
 			font-family: "flaticon";
 			font-size: 90px;
 			line-height: 80px;
-			color: #e5f0fb;
+			color: #e9e9e9;
 
 		}
 	}
@@ -244,6 +251,7 @@
 			font-family: "Flaticon";
 			content: "\f120";
 			font-size: 250px;
+			font-size: calc-rem-value(250);
 			color: #ecf3fb;
 			margin-left: 0;
 			position: absolute;
@@ -265,7 +273,7 @@
 
 		&:before {
 			content: "";
-			background-color: rgb(22, 57, 103);
+			background-color: $theme-primary-color-s5;
 			width: 100%;
 			height: 100%;
 			position: absolute;
@@ -311,7 +319,7 @@
 				height: 0px;
 				border-top: 9px solid transparent;
 				border-bottom: 10px solid transparent;
-				border-left: 14px solid #2f426b;
+				border-left: 14px solid $theme-primary-color;
 				position: absolute;
 				left: 52%;
 				top: 50%;
@@ -322,6 +330,7 @@
 
 		.fi:before {
 			font-size: 20px;
+			font-size: calc-rem-value(20);
 			color: $theme-primary-color;
 		}
 	}
@@ -375,4 +384,18 @@
 	  -webkit-transform: scale3d(1, 1, 1);
 	  transform: scale3d(1, 1, 1);
 	}
+  }
+
+
+  .grid-page{
+	  .pagination-wrapper{
+		  margin-top: 150px;
+	  }
+
+	  .blog-sidebar{
+		  @media(max-width:1200px){
+            padding-left: 0;
+			margin-top: 30px;
+		  }
+	  }
   }
