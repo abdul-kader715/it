@@ -229,7 +229,7 @@
             autoplayHoverPause: true,
             dots: false,
             nav: true,
-            navText: ['<i class="fi flaticon-right-arrow"></i>', '<i class="fi flaticon-left-arrow"></i>'],
+            navText: ['<i class="fi flaticon-left-arrow"></i>', '<i class="fi flaticon-right-arrow"></i>'],
             responsive: {
                 0: {
                     items: 1,

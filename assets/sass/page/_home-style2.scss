@@ -1,3 +1,9 @@
+/*======================================
+5. Home-style-2
+ =======================================*/
+
+/* 5.1	wpo-about-section-s2 */
+
 .wpo-about-section-s2 {
 
     .wpo-about-img {
@@ -154,6 +160,7 @@
         }
     }
 }
+/* 5.2	wpo-service-section-s2 */
 
 .wpo-service-section-s2 {
     .service-wrapper {
@@ -242,17 +249,18 @@
             .service-slider {
 
                 .owl-nav button.owl-next {
-                    bottom: 32%;
+                    bottom: 49%;
                 }
 
                 .owl-nav button {
-                    bottom: 32%;
+                    bottom: 49%;
                 }
             }
         }
     }
 
 }
+/* 5.3	wpo-fun-fact-section-s2 */
 
 .wpo-fun-fact-section-s2 {
     overflow: hidden;
@@ -295,7 +303,7 @@
     }
 }
 
-/* 6.4 wpo-pricing-section */
+/* 5.4	wpo-pricing-section  */
 
 .wpo-pricing-section {
     .wpo-pricing-wrap {
@@ -446,7 +454,7 @@
         }
     }
 }
-
+/* 5.5	wpo-blog-section-s2 */
 .wpo-blog-section-s2{
     .wpo-section-title {
         text-align: center;

@@ -535,19 +535,26 @@
 					li {
 						list-style: none;
 
-						img {
+						i {
 							margin-left: 40px;
-							padding: 15px;
 							width: 50px;
+							height: 50px;
 							background: $light;
 							border-radius: 50%;
+							font-size: 20px;
+							color: $theme-primary-color;
+							display: flex;
+							justify-content: center;
+							align-items: center;
 
 							@media (max-width:991px) {
 								margin-left: 10px;
+								font-size: 16px;
 							}
 
 							@media (max-width:767px) {
 								margin-left: 0;
+								font-size: 15px;
 							}
 						}
 

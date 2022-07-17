@@ -1,4 +1,5 @@
-// wpo-about-section 
+/* 3.2 wpo-about-section */
+
 .wpo-about-section,
 .wpo-about-section-s2,
 .wpo-about-section-s3 {
@@ -91,7 +92,7 @@
                     position: absolute;
                     top: -50px;
                     right: -32px;
-                    width: 265px;
+                    width: 267px;
                     height: 245px;
                     content: '';
                     background: $body-color;
@@ -197,7 +198,8 @@
     }
 }
 
-// wpo-services-section
+/* 3.3 wpo-services-section */
+
 .wpo-service-section,
 .wpo-service-section-s2,
 .wpo-service-section-s3 {
@@ -344,7 +346,7 @@
 
             .service-slider {
 
-                .owl-nav button.owl-next {
+                .owl-nav button.owl-prev {
                     left: -11%;
                     bottom: 50%;
                     transform: translateY(-50%);
@@ -428,9 +430,8 @@
 
 }
 
-/*--------------------------------------------------------------
-#1.2 wpo-fun-fact-section 
---------------------------------------------------------------*/
+/* 3.4 wpo-fun-fact-section */
+
 .wpo-fun-fact-section,
 .wpo-fun-fact-section-s2 {
     padding-bottom: 0;
@@ -657,9 +658,8 @@
     }
 }
 
-/*--------------------------------------------------------------
-#1.2 wpo-team-section
---------------------------------------------------------------*/
+/* 3.5 wpo-team-section */
+
 .wpo-team-section {
     // background: $body-color;
     position: relative;
@@ -962,9 +962,8 @@
 
 }
 
-/*--------------------------------------------------------------
-#1.3 wpo-partners-section
---------------------------------------------------------------*/
+/* 3.6 wpo-partners-section */
+
 .wpo-partners-section {
     padding: 50px 0;
     position: relative;
@@ -1023,9 +1022,7 @@
     }
 }
 
-/*--------------------------------------------------------------
-#1.4 wpo-portfolio-section
---------------------------------------------------------------*/
+/* 3.7 wpo-portfolio-section */
 .wpo-portfolio-section {
     padding-bottom: 90px;
     margin: 0 30px;
@@ -1130,9 +1127,8 @@
     }
 }
 
-/*--------------------------------------------------------------
-#1.5 wpo-testimonial-section
---------------------------------------------------------------*/
+/* 3.8 wpo-testimonial-section */
+
 .wpo-testimonial-section {
     position: relative;
     overflow: hidden;
@@ -1477,9 +1473,7 @@
     }
 }
 
-/*--------------------------------------------------------------
-#1.5 wpo-blog-section
---------------------------------------------------------------*/
+/* 3.9 wpo-blog-section */
 
 .wpo-blog-section,
 .wpo-blog-section-s2 {
@@ -1657,9 +1651,8 @@
 
 }
 
-/*--------------------------------------------------------------
-#1.5 wpo-social-section
---------------------------------------------------------------*/
+/* 3.10 wpo-social-section */
+
 .wpo-social-section {
     background: $theme-primary-color;
     padding: 30px 0;

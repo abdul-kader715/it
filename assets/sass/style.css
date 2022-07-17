@@ -18,48 +18,51 @@ Version:        1.0.0
 
 3. content
 	3.1 wpo-hero-slider
-	3.2 wpo-features-section
-	3.3 wpo-contact-section
-	3.4 wpo-service-section
-	3.5 wpo-case-section
-	3.6 wpo-testimonials-section
-	3.7 wpo-team-section
-	3.8 wpo-consultancy-section
+	3.2 wpo-about-section
+	3.3 wpo-services-section
+	3.4 wpo-fun-fact-section
+	3.5 wpo-team-section
+	3.6 wpo-partners-section
+	3.7 wpo-portfolio-section
+	3.8 wpo-testimonial-section 
 	3.9 wpo-blog-section
+	3.10 wpo-social-section 
 
 4. wpo-footer
 
 5. Home-style-2
-   5.1	wpo-features-section-s2
-   5.2	wpo-about-section
-   5.3	wpo-service-section-s2
-   5.4	wpo-fun-fact-section
+   5.1	wpo-about-section-s2
+   5.2	wpo-service-section-s2
+   5.3	wpo-fun-fact-section-s2
+   5.4	wpo-pricing-section 
+   5.5	wpo-blog-section-s2
 
-6. wpo-Attorney-single
+6. wpo-about-page
+	6.1	wpo-about-section-s3
 
-7. wpo-service-single-section
+7. wpo-service-page
 
-8. wpo-case-section
+8. wpo-service-page
 
-9. wpo-cart-page-style
+9. wpo-shop-page
 
-10. wpo-checkout-page-style
+10. wpo-shop-single-page
 
 11. wpo-shop-page
 
 12. wpo-shop-single-page
 
-13. wpo-pricing-page
+13. wpo-team-single
 
-14. wpo-faq-page
+14. wpo-blog-pg-section
 
-15. wpo-blog-pg-section
+15. wpo-blog-single-section
 
-16. wpo-blog-single-section
+16. error-404-section
 
-17. wpo-contact-pg-section
+17. wpo-faq-page
 
-18. error-404-section
+18. wpo-contact-pg-section
 
 ----------------------------------------------------------------*/
 /*------------------------------------------------------------------
@@ -520,12 +523,10 @@ img {
   appearance: none;
   cursor: pointer;
 }
-.form select::-ms-expand {
-  /* for IE 11 */
+.form select::-ms-expand { /* for IE 11 */
   display: none;
 }
-.form :-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
+.form :-ms-input-placeholder { /* Internet Explorer 10-11 */
   font-style: normal;
 }
 .form ::-moz-placeholder {
@@ -1722,30 +1723,37 @@ img {
 .header-style-2 .topbar .contact-intro .contact-info a li {
   list-style: none;
 }
-.header-style-1 .topbar .contact-intro .contact-info ul li img, .header-style-3 .topbar .contact-intro .contact-info ul li img, .header-style-2 .topbar .contact-intro .contact-info ul li img,
-.header-style-1 .topbar .contact-intro .contact-info a li img,
-.header-style-3 .topbar .contact-intro .contact-info a li img,
-.header-style-2 .topbar .contact-intro .contact-info a li img {
+.header-style-1 .topbar .contact-intro .contact-info ul li i, .header-style-3 .topbar .contact-intro .contact-info ul li i, .header-style-2 .topbar .contact-intro .contact-info ul li i,
+.header-style-1 .topbar .contact-intro .contact-info a li i,
+.header-style-3 .topbar .contact-intro .contact-info a li i,
+.header-style-2 .topbar .contact-intro .contact-info a li i {
   margin-left: 40px;
-  padding: 15px;
   width: 50px;
+  height: 50px;
   background: #F5F6F8;
   border-radius: 50%;
+  font-size: 20px;
+  color: #6D1FEE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 991px) {
-  .header-style-1 .topbar .contact-intro .contact-info ul li img, .header-style-3 .topbar .contact-intro .contact-info ul li img, .header-style-2 .topbar .contact-intro .contact-info ul li img,
-.header-style-1 .topbar .contact-intro .contact-info a li img,
-.header-style-3 .topbar .contact-intro .contact-info a li img,
-.header-style-2 .topbar .contact-intro .contact-info a li img {
+  .header-style-1 .topbar .contact-intro .contact-info ul li i, .header-style-3 .topbar .contact-intro .contact-info ul li i, .header-style-2 .topbar .contact-intro .contact-info ul li i,
+.header-style-1 .topbar .contact-intro .contact-info a li i,
+.header-style-3 .topbar .contact-intro .contact-info a li i,
+.header-style-2 .topbar .contact-intro .contact-info a li i {
     margin-left: 10px;
+    font-size: 16px;
   }
 }
 @media (max-width: 767px) {
-  .header-style-1 .topbar .contact-intro .contact-info ul li img, .header-style-3 .topbar .contact-intro .contact-info ul li img, .header-style-2 .topbar .contact-intro .contact-info ul li img,
-.header-style-1 .topbar .contact-intro .contact-info a li img,
-.header-style-3 .topbar .contact-intro .contact-info a li img,
-.header-style-2 .topbar .contact-intro .contact-info a li img {
+  .header-style-1 .topbar .contact-intro .contact-info ul li i, .header-style-3 .topbar .contact-intro .contact-info ul li i, .header-style-2 .topbar .contact-intro .contact-info ul li i,
+.header-style-1 .topbar .contact-intro .contact-info a li i,
+.header-style-3 .topbar .contact-intro .contact-info a li i,
+.header-style-2 .topbar .contact-intro .contact-info a li i {
     margin-left: 0;
+    font-size: 15px;
   }
 }
 .header-style-1 .topbar .contact-intro .contact-info ul li .contact-dete, .header-style-3 .topbar .contact-intro .contact-info ul li .contact-dete, .header-style-2 .topbar .contact-intro .contact-info ul li .contact-dete,
@@ -2068,7 +2076,7 @@ img {
 }
 
 /*--------------------------------------------------------------
-#0.4	hero slider
+3. content
 --------------------------------------------------------------*/
 .hero {
   position: relative;
@@ -2585,6 +2593,7 @@ img {
   }
 }
 
+/*3.1 wpo-hero-slider*/
 .static-hero-s2 {
   background: #001E37;
   height: 830px;
@@ -3167,6 +3176,7 @@ img {
   box-shadow: none;
 }
 
+/* 3.2 wpo-about-section */
 .wpo-about-section .wpo-about-wrap,
 .wpo-about-section-s2 .wpo-about-wrap,
 .wpo-about-section-s3 .wpo-about-wrap {
@@ -3286,7 +3296,7 @@ img {
   position: absolute;
   top: -50px;
   right: -32px;
-  width: 265px;
+  width: 267px;
   height: 245px;
   content: "";
   background: #828086;
@@ -3404,6 +3414,7 @@ img {
   }
 }
 
+/* 3.3 wpo-services-section */
 .wpo-service-section,
 .wpo-service-section-s2,
 .wpo-service-section-s3 {
@@ -3570,9 +3581,9 @@ img {
   visibility: visible;
   bottom: 0;
 }
-.wpo-service-section .service-wrapper .service-grids .service-slider .owl-nav button.owl-next,
-.wpo-service-section-s2 .service-wrapper .service-grids .service-slider .owl-nav button.owl-next,
-.wpo-service-section-s3 .service-wrapper .service-grids .service-slider .owl-nav button.owl-next {
+.wpo-service-section .service-wrapper .service-grids .service-slider .owl-nav button.owl-prev,
+.wpo-service-section-s2 .service-wrapper .service-grids .service-slider .owl-nav button.owl-prev,
+.wpo-service-section-s3 .service-wrapper .service-grids .service-slider .owl-nav button.owl-prev {
   left: -11%;
   bottom: 50%;
   transform: translateY(-50%);
@@ -3657,9 +3668,7 @@ img {
   background: #6D1FEE;
 }
 
-/*--------------------------------------------------------------
-#1.2 wpo-fun-fact-section 
---------------------------------------------------------------*/
+/* 3.4 wpo-fun-fact-section */
 .wpo-fun-fact-section,
 .wpo-fun-fact-section-s2 {
   padding-bottom: 0;
@@ -3917,9 +3926,7 @@ img {
   }
 }
 
-/*--------------------------------------------------------------
-#1.2 wpo-team-section
---------------------------------------------------------------*/
+/* 3.5 wpo-team-section */
 .wpo-team-section {
   position: relative;
   z-index: 1;
@@ -4182,9 +4189,7 @@ img {
   bottom: 92%;
 }
 
-/*--------------------------------------------------------------
-#1.3 wpo-partners-section
---------------------------------------------------------------*/
+/* 3.6 wpo-partners-section */
 .wpo-partners-section {
   padding: 50px 0;
   position: relative;
@@ -4227,9 +4232,7 @@ img {
   display: none;
 }
 
-/*--------------------------------------------------------------
-#1.4 wpo-portfolio-section
---------------------------------------------------------------*/
+/* 3.7 wpo-portfolio-section */
 .wpo-portfolio-section {
   padding-bottom: 90px;
   margin: 0 30px;
@@ -4311,9 +4314,7 @@ img {
   }
 }
 
-/*--------------------------------------------------------------
-#1.5 wpo-testimonial-section
---------------------------------------------------------------*/
+/* 3.8 wpo-testimonial-section */
 .wpo-testimonial-section {
   position: relative;
   overflow: hidden;
@@ -4611,9 +4612,7 @@ img {
   top: 10%;
 }
 
-/*--------------------------------------------------------------
-#1.5 wpo-blog-section
---------------------------------------------------------------*/
+/* 3.9 wpo-blog-section */
 .wpo-blog-section,
 .wpo-blog-section-s2 {
   padding-bottom: 75px;
@@ -4797,9 +4796,7 @@ img {
   color: #6D1FEE;
 }
 
-/*--------------------------------------------------------------
-#1.5 wpo-social-section
---------------------------------------------------------------*/
+/* 3.10 wpo-social-section */
 .wpo-social-section {
   background: #6D1FEE;
   padding: 30px 0;
@@ -4853,6 +4850,10 @@ img {
   padding: 0;
 }
 
+/*======================================
+5. Home-style-2
+ =======================================*/
+/* 5.1	wpo-about-section-s2 */
 .wpo-about-section-s2 .wpo-about-img {
   position: relative;
 }
@@ -5005,6 +5006,7 @@ img {
   border-radius: 50%;
 }
 
+/* 5.2	wpo-service-section-s2 */
 .wpo-service-section-s2 .service-wrapper .service-grids .grid {
   padding: 0;
   border: 1px transparent;
@@ -5071,12 +5073,13 @@ img {
   color: #fff;
 }
 .wpo-service-section-s2 .service-wrapper .service-grids .service-slider .owl-nav button.owl-next {
-  bottom: 32%;
+  bottom: 49%;
 }
 .wpo-service-section-s2 .service-wrapper .service-grids .service-slider .owl-nav button {
-  bottom: 32%;
+  bottom: 49%;
 }
 
+/* 5.3	wpo-fun-fact-section-s2 */
 .wpo-fun-fact-section-s2 {
   overflow: hidden;
 }
@@ -5117,7 +5120,7 @@ img {
   }
 }
 
-/* 6.4 wpo-pricing-section */
+/* 5.4	wpo-pricing-section  */
 .wpo-pricing-section .wpo-pricing-wrap .wpo-pricing-item {
   box-shadow: 0px 2px 16.8px 3.2px rgba(0, 38, 66, 0.08);
   position: relative;
@@ -5230,6 +5233,7 @@ img {
   margin-bottom: 0;
 }
 
+/* 5.5	wpo-blog-section-s2 */
 .wpo-blog-section-s2 .wpo-section-title {
   text-align: center;
   margin-right: 0;
@@ -5302,10 +5306,17 @@ img {
   }
 }
 
+/*======================================
+6. wpo-about-page
+ =======================================*/
+/* 6.1	wpo-about-section-s3 */
 .wpo-about-section-s3 {
   padding-bottom: 0;
 }
 
+/*======================================
+7. wpo-service-page
+ =======================================*/
 .wpo-service-section-s3 {
   margin-top: 120px;
 }
@@ -5321,7 +5332,7 @@ img {
 }
 
 /*=====================================================
-18. wpo-service-single
+8. wpo-service-single
 ======================================================*/
 .wpo-service-single-area .wpo-service-single-wrap .wpo-service-single-title h3 {
   font-weight: 400;
@@ -5453,7 +5464,7 @@ img {
 }
 
 /*--------------------------------------------------------------
-17. wpo-shop-page
+9. wpo-shop-page
 --------------------------------------------------------------*/
 .wpo-shop-section .shop-grids {
   margin: 0 -15px;
@@ -5555,7 +5566,7 @@ img {
 }
 
 /*--------------------------------------------------------------
-12. wpo-shop-single-page
+10. wpo-shop-single-page
 --------------------------------------------------------------*/
 .wpo-shop-single-section {
   /*** product slider ***/
@@ -6082,7 +6093,7 @@ img {
 }
 
 /*==========================================
-16. wpo-team-single
+13. wpo-team-single
 ===========================================*/
 .team-pg-area {
   max-width: 1080px;
@@ -6483,19 +6494,16 @@ img {
   .team-info-text {
     padding: 40px 20px;
   }
-
   .team-info-img {
     padding: 40px;
   }
   .team-info-img img {
     width: 100%;
   }
-
   .custom-grid {
     float: left;
     width: 50%;
   }
-
   .exprience-area {
     padding-top: 30px;
   }
@@ -6505,7 +6513,6 @@ img {
     float: none;
     width: 100%;
   }
-
   .lawyer-about.pt-150 {
     padding-top: 100px !important;
   }
@@ -6568,7 +6575,7 @@ img {
 }
 
 /*--------------------------------------------------------------
-19. wpo-blog-pg-section
+14. wpo-blog-pg-section
 --------------------------------------------------------------*/
 .wpo-blog-pg-section {
   /*** format-standard ***/
@@ -6911,7 +6918,7 @@ img {
 }
 
 /*--------------------------------------------------------------
-16. wpo-blog-single-section
+15. wpo-blog-single-section
 --------------------------------------------------------------*/
 .wpo-blog-single-section {
   /*** tag-share ***/
@@ -7515,7 +7522,7 @@ img {
 }
 
 /*--------------------------------------------------------------
-22. error-404-section
+16. error-404-section
 --------------------------------------------------------------*/
 .error-404-section {
   text-align: center;
@@ -7548,7 +7555,7 @@ img {
 }
 
 /*--------------------------------------------------------------
-13. wpo-faq-page
+17. wpo-faq-page
 --------------------------------------------------------------*/
 .wpo-faq-section .wpo-section-title {
   text-align: center;
@@ -7713,7 +7720,7 @@ img {
 }
 
 /*--------------------------------------------------------------
-21. wpo-contact-pg-section
+18. wpo-contact-pg-section
 --------------------------------------------------------------*/
 .wpo-contact-pg-section {
   padding-bottom: 0px;

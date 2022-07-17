@@ -19,48 +19,51 @@ Version:        1.0.0
 
 3. content
 	3.1 wpo-hero-slider
-	3.2 wpo-features-section
-	3.3 wpo-contact-section
-	3.4 wpo-service-section
-	3.5 wpo-case-section
-	3.6 wpo-testimonials-section
-	3.7 wpo-team-section
-	3.8 wpo-consultancy-section
+	3.2 wpo-about-section
+	3.3 wpo-services-section
+	3.4 wpo-fun-fact-section
+	3.5 wpo-team-section
+	3.6 wpo-partners-section
+	3.7 wpo-portfolio-section
+	3.8 wpo-testimonial-section 
 	3.9 wpo-blog-section
+	3.10 wpo-social-section 
 
 4. wpo-footer
 
 5. Home-style-2
-   5.1	wpo-features-section-s2
-   5.2	wpo-about-section
-   5.3	wpo-service-section-s2
-   5.4	wpo-fun-fact-section
+   5.1	wpo-about-section-s2
+   5.2	wpo-service-section-s2
+   5.3	wpo-fun-fact-section-s2
+   5.4	wpo-pricing-section 
+   5.5	wpo-blog-section-s2
 
-6. wpo-Attorney-single
+6. wpo-about-page
+	6.1	wpo-about-section-s3
 
-7. wpo-service-single-section
+7. wpo-service-page
 
-8. wpo-case-section
+8. wpo-service-page
 
-9. wpo-cart-page-style
+9. wpo-shop-page
 
-10. wpo-checkout-page-style
+10. wpo-shop-single-page
 
 11. wpo-shop-page
 
 12. wpo-shop-single-page
 
-13. wpo-pricing-page
+13. wpo-team-single
 
-14. wpo-faq-page
+14. wpo-blog-pg-section
 
-15. wpo-blog-pg-section
+15. wpo-blog-single-section
 
-16. wpo-blog-single-section
+16. error-404-section
 
-17. wpo-contact-pg-section
+17. wpo-faq-page
 
-18. error-404-section
+18. wpo-contact-pg-section
 
 ----------------------------------------------------------------*/
 
@@ -110,12 +113,10 @@ Version:        1.0.0
 @import "page/_shop-single";
 
 @import "page/_team";
-
 @import "page/_team-single";
 
 
 @import "page/_blog";
-
 @import "page/_blog-single";
 
 @import "page/_404";
@@ -123,7 +124,3 @@ Version:        1.0.0
 @import "page/_faq";
 
 @import "page/contact";
-
-
-
-
