@@ -598,7 +598,7 @@
                         queue: false,
                     }
                 });
-                return false;
+                return false;service-slider
             });
         }
     }

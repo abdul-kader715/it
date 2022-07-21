@@ -70,7 +70,12 @@
                     }
                 }
             }
-
+            .tp-fun-fact-grids{
+                @media (max-width:991px) {
+                   display: none;
+                }
+                
+            }
             .wpo-about-exprience .tp-fun-fact-grids h3 span {
                 font-size: 70px;
                 line-height: 64px;
@@ -380,6 +385,9 @@
                         border-bottom: 1px solid $theme-primary-color;
                         transition: all .4s ease-in-out;
                         color: $dark-gray;
+                        @media (max-width:1199px) {
+                            font-size: 13px;
+                        }
                     }
                 }
             }
@@ -388,6 +396,10 @@
                 padding: 40px;
                 padding-top: 35px;
                 text-align: center;
+                @media (max-width:1199px) {
+                    padding-left: 28px;
+                    padding-right: 28px;
+                }
 
                 .wpo-pricing-bottom-text {
                     ul {
