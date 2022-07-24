@@ -292,7 +292,11 @@
 		transform: translate(-50%, -50%);
 
 		@media (max-width:1399px) {
-			left: 62%;
+			left: 59%;
+		}
+
+		@media (max-width:1199px) {
+			left: 57%;
 		}
 
 		@media (max-width:991px) {
@@ -303,8 +307,12 @@
 			left: 39%;
 		}
 
-		@media (max-width:469px) {
-			left: 70%;
+		@media (max-width:525px) {
+			left: 50%;
+		}
+
+		@media (max-width:375px) {
+			left: 68%;
 		}
 	}
 
@@ -314,13 +322,13 @@
 		font-weight: 700;
 		line-height: 20px;
 		color: $dark-gray;
-		margin-left: 120px;
+		margin-left: 100px;
 
 		@media (max-width:991px) {
 			margin-left: 40px;
 		}
 
-		@media (max-width:469px) {
+		@media (max-width:525px) {
 			display: none;
 		}
 	}
@@ -339,6 +347,7 @@
 		border-radius: 50%;
 		position: relative;
 
+
 		@media (max-width:991px) {
 			width: 55px;
 			height: 55px;
@@ -356,15 +365,16 @@
 			background: $white;
 			border-radius: 50%;
 			position: absolute;
+			transform: translate(-50%, -50%);
 			left: -9px;
-			top: -10px;
+			top: -9px;
 			-webkit-animation: pulse 1s infinite;
 			animation: pulse 1s infinite;
 			z-index: -1;
 
-			@media (max-width:991px) {
-				left: -8px;
-				top: -8px;
+			@media (max-width:469px) {
+				left: -7px;
+				top: -7px;
 			}
 
 		}
@@ -396,9 +406,9 @@
 		top: 0;
 		left: 0;
 		z-index: -1;
-		@media (max-width:767px) {
-			
-		}
+
+		@media (max-width:767px) {}
+
 		svg {
 			circle {
 				fill: #EAEE1F;
@@ -411,8 +421,8 @@
 		top: 0;
 		right: 0;
 		z-index: -1;
-		@media (max-width:767px) {
-		}
+
+		@media (max-width:767px) {}
 
 		svg {
 			circle {
