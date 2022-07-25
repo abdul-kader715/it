@@ -34,7 +34,7 @@
 		>ul li a:hover,
 		>ul li a:focus {
 			text-decoration: none;
-			color: $dark-gray;
+			color: $theme-primary-color;
 		}
 
 		// style for widther screen
@@ -681,7 +681,7 @@
 
 
 	#navbar>ul>li a {
-		color: $section-bg-color;
+		color:  $dark-gray
 	}
 
 	.navigation .search-quote {
